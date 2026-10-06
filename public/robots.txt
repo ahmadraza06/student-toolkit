@@ -1,0 +1,6 @@
+
+
+User-agent: *
+Allow: /
+
+Sitemap: https://student-toolkit-zeta-seven.vercel.app/sitemap.xml
