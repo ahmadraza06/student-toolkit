@@ -53,6 +53,26 @@ function PercentageCalculator() {
   }
 
   return (
+    <>
+    <Helmet>
+  <title>Percentage Calculator — Calculate Marks Percentage | Student Toolkit</title>
+
+  <meta
+    name="description"
+    content="Calculate your marks percentage quickly with the free Student Toolkit Percentage Calculator."
+  />
+
+  <meta
+    name="robots"
+    content="index, follow"
+  />
+
+  <link
+    rel="canonical"
+    href="https://student-toolkit-zeta-seven.vercel.app/tools/percentage-calculator"
+  />
+</Helmet>
+    
     <section className="mx-auto max-w-4xl px-6 py-16">
       {/* Header */}
       <div className="max-w-2xl">
@@ -252,6 +272,7 @@ function PercentageCalculator() {
         </div>
       </div>
     </section>
+    </>
   );
 }
 

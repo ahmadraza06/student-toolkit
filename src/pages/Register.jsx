@@ -37,6 +37,11 @@ export default function Register() {
   }
 
   return (
+    <>
+    <Helmet>
+      <title>Create Account | Student Toolkit</title>
+      <meta name="robots" content="noindex, nofollow" />
+    </Helmet>
     <main className="mx-auto max-w-md px-4 py-12">
       <h1 className="mb-2 text-3xl font-bold">
         Create your account
@@ -100,5 +105,6 @@ export default function Register() {
         </Link>
       </p>
     </main>
+    </>
   );
 }

@@ -68,6 +68,26 @@ function AgeCalculator() {
   }
 
   return (
+    <> 
+    <Helmet>
+      <title>Age Calculator — Calculate Your Age Online | Student Toolkit</title>
+
+      <meta
+        name="description"
+        content="Calculate your exact age in years, months, and days with the free Student Toolkit Age Calculator."
+      />
+
+      <meta
+        name="robots"
+        content="index, follow"
+      />
+
+      <link
+        rel="canonical"
+        href="https://student-toolkit-zeta-seven.vercel.app/tools/age-calculator"
+      />
+    </Helmet> 
+    
     <section className="mx-auto max-w-4xl px-6 py-16">
       {/* Header */}
       <div className="max-w-2xl">
@@ -254,6 +274,7 @@ function AgeCalculator() {
         </div>
       </div>
     </section>
+    </>
   );
 }
 

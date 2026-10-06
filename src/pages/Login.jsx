@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
+import { Helmet } from "react-helmet-async";
 
 export default function Login() {
   const { login } = useAuth();
@@ -29,6 +30,12 @@ export default function Login() {
   }
 
   return (
+    <>
+    <Helmet>
+      <title>Login | Student Toolkit</title>
+      <meta name="robots" content="noindex, nofollow" />
+    </Helmet>
+    
     <main className="mx-auto max-w-md px-4 py-12">
       <h1 className="mb-2 text-3xl font-bold">
         Welcome back
@@ -80,5 +87,6 @@ export default function Login() {
         </Link>
       </p>
     </main>
+    </>
   );
 }

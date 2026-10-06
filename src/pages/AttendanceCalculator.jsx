@@ -120,6 +120,26 @@ function AttendanceCalculator() {
   }
 
   return (
+    <>
+    <Helmet>
+      <title>Attendance Calculator — Calculate Student Attendance | Student Toolkit</title>
+
+      <meta
+        name="description"
+        content="Calculate your attendance percentage and find out how many classes you need to attend with the Student Toolkit Attendance Calculator."
+      />
+
+      <meta
+        name="robots"
+        content="index, follow"
+      />
+
+      <link
+        rel="canonical"
+        href="https://student-vercel.app/attendance-calculator"
+      />
+    </Helmet>
+    
     <section className="mx-auto max-w-4xl px-6 py-16">
       {/* Header */}
       <div className="max-w-2xl">
@@ -374,6 +394,7 @@ function AttendanceCalculator() {
         </div>
       </div>
     </section>
+    </>
   );
 }
 

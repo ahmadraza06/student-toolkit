@@ -2,6 +2,7 @@
 
 import React from 'react'
 import { ToolCard } from '../components/ToolCard'
+import { Helmet } from 'react-helmet-async'
 
 export const Tools = () => {
 
@@ -35,6 +36,20 @@ export const Tools = () => {
     ]
     
     return (
+        <>
+        <Helmet>
+        <title>Student Tools — Free Calculators | Student Toolkit</title>
+
+        <meta
+          name="description"
+          content="Free student calculators and productivity tools for CGPA, percentage, attendance, age, study planning and more."
+        />
+
+        <link
+          rel="canonical"
+          href="https://student-toolkit-zeta-seven.vercel.app/tools"
+        />
+      </Helmet>
         <section className='mx-auto max-w-7xl px-6 py-16 '>
             <div className='max-w-2xl'>
                 <p className='text-sm font-semibold uppercase tracking-wide text-blue-600'>
@@ -62,6 +77,7 @@ export const Tools = () => {
                 }
             </div>
         </section>
+        </>
     )
 }
 

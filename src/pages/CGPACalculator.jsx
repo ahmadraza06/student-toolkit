@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import { Helmet } from "react-helmet-async";
 const initialSubject = {
   subject: "",
   grade: "",
@@ -130,6 +130,28 @@ function CGPACalculator() {
   }
 
   return (
+    <>
+
+    <Helmet>
+      <title>CGPA Calculator — Free Online CGPA Calculator | Student Toolkit</title>
+
+      <meta
+        name="description"
+        content="Calculate your CGPA quickly with the free Student Toolkit CGPA Calculator. Simple and easy to use for students."
+      />
+
+      <meta
+        name="robots"
+        content="index, follow"
+      />
+
+      <link
+        rel="canonical"
+        href="https://student-toolkit-zeta-seven.vercel.app/tools/cgpa-calculator"
+      />
+    </Helmet>
+    
+    
     <section className="mx-auto max-w-4xl px-6 py-16">
       {/* Header */}
       <div className="max-w-2xl">
@@ -405,6 +427,7 @@ function CGPACalculator() {
   </div>
 </div>
     </section>
+    </>
 
   );
 }
