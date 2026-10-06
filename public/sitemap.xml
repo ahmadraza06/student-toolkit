@@ -9,6 +9,15 @@
     <loc>https://student-toolkit-zeta-seven.vercel.app/tools</loc>
   </url>
   <url>
-    <loc>https://student-toolkit-zeta-seven.vercel.app/register</loc>
+    <loc>https://student-toolkit-zeta-seven.vercel.app/tools/cgpa-calculator</loc>
+  </url>
+  <url>
+    <loc>https://student-toolkit-zeta-seven.vercel.app/tools/percentage-calculator</loc>
+  </url>
+  <url>
+    <loc>https://student-toolkit-zeta-seven.vercel.app/tools/attendance-calculator</loc>
+  </url>
+  <url>
+    <loc>  https://student-toolkit-zeta-seven.vercel.app/tools/age-calculator</loc>
   </url>
 </urlset>
