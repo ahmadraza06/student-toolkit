@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Helmet } from "react-helmet-async";
+import { trackEvent } from "../services/analytics";
 function PercentageCalculator() {
   const [obtained, setObtained] = useState("");
   const [total, setTotal] = useState("");
@@ -43,6 +44,7 @@ function PercentageCalculator() {
     const result = (obtainedMarks / totalMarks) * 100;
 
     setPercentage(result.toFixed(2));
+    trackEvent("percentage_calculated")
   }
 
   function resetCalculator() {

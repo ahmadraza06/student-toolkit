@@ -12,6 +12,7 @@ import {
 } from "../services/resumeApi";
 
 import {fromApiResume} from "../utils/resumeMapper"
+import { trackEvent } from "../services/analytics";
 
 
 const initialResume = {
@@ -120,8 +121,10 @@ function ResumeBuilder() {
 
       if (cloudResumeId) {
         result = await updateResume(cloudResumeId, resume);
+        trackEvent("resume_updated");
       } else {
         result = await saveResume(resume);
+         trackEvent("resume_created");
       }
 
       const savedResume = result.data.resume;

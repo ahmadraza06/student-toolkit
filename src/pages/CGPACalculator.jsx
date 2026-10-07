@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Helmet } from "react-helmet-async";
+import { trackEvent } from "../services/analytics";
 const initialSubject = {
   subject: "",
   grade: "",
@@ -118,6 +119,7 @@ function CGPACalculator() {
         totalCredits,
         totalWeightedPoints,
     });
+    trackEvent("cgpa_calculated")
   }
 
   function resetCalculator() {

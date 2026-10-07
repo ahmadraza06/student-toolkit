@@ -4,6 +4,7 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
+import { trackEvent } from "../services/analytics";
 
 export default function Register() {
   const { register } = useAuth();
@@ -29,6 +30,7 @@ export default function Register() {
     try {
       await register(name, email, password);
       navigate("/login", { replace: true });
+      trackEvent("user_registered")
     } catch (err) {
       setError(err.message || "Registration failed.");
     } finally {

@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 import { Helmet } from "react-helmet-async";
+import { trackEvent } from "../services/analytics";
 
 export default function Login() {
   const { login } = useAuth();
@@ -22,6 +23,7 @@ export default function Login() {
     try {
       await login(email, password);
       navigate("/dashboard", { replace: true });
+      trackEvent("user_login")
     } catch (err) {
       setError(err.message || "Login failed.");
     } finally {

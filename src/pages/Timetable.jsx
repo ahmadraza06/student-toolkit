@@ -5,6 +5,7 @@ import {
   createTimetable,
   updateTimetable,
 } from "../services/timetableApi";
+import { trackEvent } from "../services/analytics";
 
 function Timetable() {
   const location = useLocation();
@@ -69,7 +70,7 @@ function Timetable() {
         ? schedule.timetable
         : []
     );
-
+    trackEvent("timetable_created")
     setError("");
     setSaveMessage("");
   }, [location.state]);

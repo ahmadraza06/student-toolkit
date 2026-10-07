@@ -1,6 +1,8 @@
 
 import { useState } from "react";
-import  {Helmet} from "react-helmet-async"
+import  {Helmet} from "react-helmet-async";
+import { trackEvent } from "../services/analytics";
+
 function AgeCalculator() {
   const [dateOfBirth, setDateOfBirth] = useState("");
   const [result, setResult] = useState(null);
@@ -59,6 +61,7 @@ function AgeCalculator() {
       days,
       totalDays,
     });
+    trackEvent("age_calculated");
   }
 
   function resetCalculator() {

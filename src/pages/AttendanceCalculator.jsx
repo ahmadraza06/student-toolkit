@@ -1,7 +1,7 @@
 
 import { useState } from "react";
 import { Helmet } from "react-helmet-async";
-
+import { trackEvent } from "../services/analytics";
 function AttendanceCalculator() {
   const [totalClasses, setTotalClasses] = useState("");
   const [attendedClasses, setAttendedClasses] = useState("");
@@ -110,6 +110,7 @@ function AttendanceCalculator() {
       classesCanMiss,
       target,
     });
+    trackEvent("attendance_calculated")
   }
 
   function resetCalculator() {
