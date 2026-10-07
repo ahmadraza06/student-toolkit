@@ -1,7 +1,7 @@
 
 
 import { useState } from "react";
-
+import { Helmet } from "react-helmet-async";
 function PercentageCalculator() {
   const [obtained, setObtained] = useState("");
   const [total, setTotal] = useState("");

@@ -45,7 +45,7 @@ export const AppRoutes = () => {
               <Route path="/dashboard" element={<Dashboard />} />
               <Route path="/my-timetables" element={<MyTimetables />} />
               <Route path="/resume-builder" element={<ResumeBuilder/>} />
-              <Route path='/timetable' element={<Timetable/>} />
+              <Route path='/tools/timetable' element={<Timetable/>} />
             </Route>
             
             

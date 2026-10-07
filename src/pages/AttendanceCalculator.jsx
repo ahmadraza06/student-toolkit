@@ -1,5 +1,6 @@
 
 import { useState } from "react";
+import { Helmet } from "react-helmet-async";
 
 function AttendanceCalculator() {
   const [totalClasses, setTotalClasses] = useState("");
